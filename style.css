@@ -1,0 +1,147 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #4b79a1, #283e51);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+html {
+    font-size: 16px;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.container {
+    width: 70vmin;
+    height: 70vmin;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vmin;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-option {
+    background: #ffffff;
+    height: 22vmin;
+    width: 22vmin;
+    border: none;
+    border-radius: 8px;
+    font-size: 12vmin;
+    color: #283e51;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, color 0.3s;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.button-option:hover {
+    background: #283e51;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.controls {
+    margin-top: 1.5em;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+}
+
+.controls button {
+    font-size: 1.3em;
+    padding: 1em;
+    border-radius: 8px;
+    background-color: #ff6f61;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.controls button:hover {
+    background-color: #ffffff;
+    color: #ff6f61;
+    transform: scale(1.1);
+}
+
+#play2P.hide {
+    display: none;
+}
+
+.popup {
+    background: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 4em;
+    transition: opacity 0.3s;
+    animation: slideDown 0.5s ease-in-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#newgame {
+    font-size: 0.6em;
+    padding: 0.5em 1em;
+    background-color: #ff6f61;
+    color: #ffffff;
+    border-radius: 0.2em;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+#newgame:hover {
+    background-color: #ffffff;
+    color: #ff6f61;
+    transform: scale(1.1);
+}
+
+#message {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1em;
+}
+
+.popup.hide {
+    display: none;
+    opacity: 0;
+}
